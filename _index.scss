@@ -64,6 +64,7 @@
 }
 .frame-title{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     .frame-item{
         width: 33.33333%;
@@ -117,7 +118,7 @@
         justify-content: center;
     }
     .design-img{
-        width: 100%;
+        width: 648px;
         height: 240px;
         background-size: cover;
         background-position: center;
@@ -151,7 +152,7 @@
             border: 1px solid gray;
         }
         .design-img{
-            width: 100%;
+            width: 696px;
             height: 240px;
         }
     }
@@ -167,7 +168,7 @@
             margin-bottom: 40px;
         }
         .design-img{
-            width: 100%;
+            width: 348px;
         }
         .design-img-1{
             background-image: url(./images/home-section4-1-sm.png);
