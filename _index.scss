@@ -1,38 +1,31 @@
 .features-txt{
     font-size: 48px;
     line-height: 72px;
-    text-align: center;
+    @include phone{
+        font-size: 24px;
+        line-height: 36px;
+        padding-top: 40px;
+    }
 }
+
 .features{
-    display: flex;
-    justify-content: space-between;
     .features-card{
         width: 24%;
-        display: flex;
-        flex-direction: column;
     }
     .features-title{
         font-size: 24px;
         line-height: 36px;
-        text-align: center;
     }
     .features-text{
         font-size: 16px;
         line-height: 24px;
-        text-align: left;
     }
     .features-menu{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
         img{
             width: 83px;
         }
     }
-}
-
-@media (max-width:992px){
-    .features{
+    @include ipad{
         flex-wrap: wrap;
         justify-content: space-evenly;
         .features-card{
@@ -41,84 +34,62 @@
         .features-menu{
             margin-bottom: 5%;
         }
+        
     }
-}
-
-@media (max-width:767px){
-    .features{
+    @include phone{
         align-items: center;
         flex-direction: column;
         .features-card{
             width: 90%;
         }
     }
-    .features-txt{
-        font-size: 24px;
-        line-height: 36px;
-        padding-top: 40px;
-    }
 }
 
 .frame-txt{
-    text-align: center;
+    @include ipad{
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 36px;
+
+    }
+    @include phone{
+        margin-bottom: 24px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    
 }
 .frame-title{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     .frame-item{
         width: 33.33333%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         margin-bottom: 80px;
     }
     img{
         max-width: 100%;
         margin-bottom: 8px;
     }
-}
-
-@media (max-width:992px){
-    .frame-txt{
-        margin-bottom: 24px;
-        font-size: 24px;
-        line-height: 36px;
-    }
-    .frame-title{
+    @include ipad {
         flex-direction: column;
-        img{
-            max-width: 100%;
-        }
     }
-}
-@media (max-width:767px){
-    .frame-txt{
-        margin-bottom: 24px;
-        font-size: 24px;
-        line-height: 36px;
-    }
-    .frame-title{
+    @include phone {
         margin-bottom: 8px;
-        img{
-            max-width:100%;
-        }
     }
 }
 .design-txt{
-    text-align: center;
+    @include phone {
+        padding-top:40px;
+        padding-bottom: 24px;
+    }
 }
 .design{
     height: 608px;
     background-image: url(./images/index-bg.png);
     background-size: cover;
     background-position: center;
-    .design-title{
-        display: flex;
-        justify-content: center;
+    .design-item{
+        width: 100%;
     }
     .design-img{
-        width: 648px;
         height: 240px;
         background-size: cover;
         background-position: center;
@@ -130,14 +101,10 @@
         background-image: url(./images/home-section4-2.png);
     }
     .design-text{
-        text-align: center;
         background-color: white;
         border-right:1px solid gray ;
     }
-}
-
-@media (max-width:992px){
-    .design{
+    @include ipad {
         height: 960px;
         background-image: url(./images/index-bg-md.png);
         .design-title{
@@ -152,91 +119,65 @@
             border: 1px solid gray;
         }
         .design-img{
-            width: 696px;
+            width: auto;
             height: 240px;
         }
     }
-}
-@media (max-width:767px){
-    .design-txt{
-        padding-top:40px;
-        padding-bottom: 24px;
-    }
-    .design{
+    @include phone {
         height: 820px;
         .design-title{
             margin-bottom: 40px;
-        }
-        .design-img{
-            width: 348px;
         }
         .design-img-1{
             background-image: url(./images/home-section4-1-sm.png);
         }
         .design-img-2{
-            background-image: url(/images/home-section4-2-sm.png);
+            background-image: url(./images/home-section4-2-sm.png);
         }
+        .design-text{
+            font-size: 24px;
+            line-height: 36px;
+        } 
     }
-    .design-text{
-        font-size: 24px;
-        line-height: 36px;
-    }   
 }
 
-.guest-txt{
-    text-align: center;
-}
 .guest-title{
-    display: flex;
-    justify-content: space-between;
     .guest-item{
-        width: 306px;
-        display: flex;
-        flex-direction: column;
+        width: 309px;
         .guest-time{
             color:#707070;
         }
     }
     img{
-        width: 100%;
+        max-width: 100%;
     }
     .guest-body{
-        // filter:blur(6px);
         border-radius: 0 0 2px 2px;
         border: 1px solid #DEE2E6;
     }
-}
-
-@media (max-width:992px){
-    .guest-title{
+    @include ipad {      
         flex-wrap: wrap;
         justify-content:space-around;
-        .guest-item{
+        .guest-tiem{
             margin-bottom: 24px;
             .guest-text{
                 margin-right: 16px;
             }
         }
     }
-}
-
-@media (max-width:767px){
-    .guest-title{
-        .guest-item{
+    @include phone {
+        .guest-tiem{
             margin-bottom: 16px;
         }
     }
 }
+
 .message{
     margin: 0 auto;
     width: 48%;
 }
-.message-title{
-    text-align: left;
-}
 .message-name,.message-phone,.message-mail,.message-complaint{
     display: block;
-    text-align: left;
 }
 .message-input,.message-number,.message-mail-number{
     width: 100%;
@@ -250,23 +191,17 @@
     height: 136px;
     border:1px solid black;
 }
-.message-check{
-    text-align: left;
-}
 .messahr-btn{
     &:hover{
         background: #aa0701a0;
         color:#707070;
     }
 }
-
 @media (max-width:992px){
     .message{
         width: 83.4%;
     }
 }
-
-
 @media (max-width:767px){
     .message{
         width: 90%;

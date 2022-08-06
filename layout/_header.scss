@@ -4,31 +4,12 @@
         max-width: 80px;
     }
 }
-.header{
+header{
     background: #AA0601;
 }
-.container{
-    width: 80%;
-    margin: 0 auto;
-    @include ipad {
-        .container{
-            max-width: 90%;
-        }
-    }
-    @include phone {
-        .container{
-            max-width: 90%;
-        }
-    }
-}
 .header-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .menu{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    li:hover{
+        font-size: 22px;
     }
     @include phone {
         .header-title{
@@ -49,10 +30,8 @@
     height: 65.5vh;
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
     .text-primary{
-        text-align: right;
+        width: 1296px;
     }
     @include ipad {
         .banner{
