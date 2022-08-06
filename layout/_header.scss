@@ -3,6 +3,9 @@
         vertical-align:middle;
         max-width: 80px;
     }
+    @include phone {
+        margin-top: 16px;
+    }
 }
 header{
     background: #AA0601;
@@ -12,17 +15,20 @@ header{
         font-size: 22px;
     }
     @include phone {
-        .header-title{
-            flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        .menu{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
             align-items: center;
-            .menu{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-            }
-        }  
+        }
+        li{
+            display: flex;
+            justify-content: center;
+            width: 33%;
+        }
     }
 }
 .banner{

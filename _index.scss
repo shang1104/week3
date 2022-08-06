@@ -73,10 +73,19 @@
     }
     @include phone {
         margin-bottom: 8px;
+        .frame-item{
+            width: 100%;
+            margin-bottom: 24px;
+        }
+        .frame-text{
+            font-size: 32px;
+            text-align: center;
+        }
     }
 }
 .design-txt{
     @include phone {
+        font-size: 24px;
         padding-top:40px;
         padding-bottom: 24px;
     }
@@ -141,6 +150,11 @@
     }
 }
 
+.guest-txt{
+    @include phone {
+        font-size: 24px;
+    }
+}
 .guest-title{
     .guest-item{
         width: 309px;
@@ -158,7 +172,7 @@
     @include ipad {      
         flex-wrap: wrap;
         justify-content:space-around;
-        .guest-tiem{
+        .guest-item{
             margin-bottom: 24px;
             .guest-text{
                 margin-right: 16px;
@@ -166,7 +180,7 @@
         }
     }
     @include phone {
-        .guest-tiem{
+        .guest-item{
             margin-bottom: 16px;
         }
     }
@@ -175,6 +189,22 @@
 .message{
     margin: 0 auto;
     width: 48%;
+    @include ipad {
+        width: 83.4%;
+    }
+    @include phone {
+        .message{
+            width: 90%;
+            padding-bottom: 40px;
+        }
+        .message-title{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .message-check{
+            margin-bottom: 24px;
+        }
+    }
 }
 .message-name,.message-phone,.message-mail,.message-complaint{
     display: block;
@@ -197,18 +227,3 @@
         color:#707070;
     }
 }
-@media (max-width:992px){
-    .message{
-        width: 83.4%;
-    }
-}
-@media (max-width:767px){
-    .message{
-        width: 90%;
-        padding-bottom: 40px;
-    }
-    .message-check{
-        margin-bottom: 24px;
-    }
-}
-
